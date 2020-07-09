@@ -1,3 +1,42 @@
+注：`Fragment:1.3.0-alpha04` で `onActivityResult()` などがdeprecatedとなり、下記の方法は使えなくなりました。古いアプリをメンテナンスする方のために、記事は残します。
+
+# 新しい方法
+
+フラグメントで呼び出し元に結果を返すには、 `setFragmentResult` と `setFragmentResultListener` を使います。この方法は `Fragment:1.3.0-alpha04` 以降で使用可能です。
+
+## 呼び出し元に結果を返す
+
+まずは呼ばれた側です。呼び出し元のフラグメントに結果を返すには、次のように `parentFragmentManager` の `setFragmentResult` を呼びます。
+
+```
+//データの入れ物
+val data = Bundle()
+data.putString("text", text)
+
+// FragmentManager経由で結果を伝える
+parentFragmentManager.setFragmentResult("input", data)
+```
+
+第1引数にはリクエストコードに相当する文字列を指定します。
+
+## 結果を受け取る
+
+次に呼んだ側で結果を受け取る方法です。 `onCreate()` あたりで、 `setFragmentResultListener()` でリスナーをセットします。これは拡張関数なので使用する際はktx版を追加しておきます。
+
+```
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setFragmentResultListener("input") { key, data ->
+        val text = data.getString("text", "")
+        // 結果を使った処理
+    }
+}
+```
+
+リスナーのセットにはLifecycleの仕組みが使われているので、リスナーの取り外しの処理は不要です。
+
+# 古い方法
+
 Activityでは、`startActivityForResult()`で次のActivityを呼び出すと、後で結果を取得することができました。Fragmentでは次のように実装することで、呼び出し元に結果を伝えることができます。
 
  - 呼び出されるFragmentオブジェクトのsetTargetFragment()で、呼び出し元のFragmentオブジェクトをセットする
