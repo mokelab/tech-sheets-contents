@@ -1,6 +1,6 @@
 OnBackPressedCallbackを使って戻るボタン時の処理を書く
 
-端末の戻るボタン(バックボタン)が押された時になんらかの処理をさせたい場合、androidx.activityに含まれている `OnBackPressedDispatcher` と `OnBackPressedCallback` を使います。
+端末の戻るボタン(バックボタン)が押された時になんらかの処理をさせたい場合、androidx.activityで提供されている `OnBackPressedDispatcher` と `OnBackPressedCallback` を使います。
 
 ```
 class MainActivity : AppCompatActivity() {
