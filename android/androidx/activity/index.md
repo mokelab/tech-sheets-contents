@@ -10,3 +10,4 @@ androidx.activity
 
 - [OnBackPressedCallbackを使って戻るボタン時の処理を書く](./OnBackPressedCallback.html)
 - [registerForActivityResultを使って結果のあるアクティビティを起動する](./registerForActivityResult.html)
+- [ActivityResultContractを自作する](./MyActivityResultContract.html)
