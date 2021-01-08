@@ -12,3 +12,4 @@ androidx.activity
 - [registerForActivityResultを使って結果のあるアクティビティを起動する](./registerForActivityResult.html)
 - [ActivityResultContractを自作する](./MyActivityResultContract.html)
 - [ActivityResultLauncherを使って権限を取得する](./permission.html)
+- [インテントを投げずに結果を返す](./getSynchronousResult.html)
