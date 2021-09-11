@@ -12,6 +12,8 @@ fun Greeting(name: String) {
 
 これをプレビューで確認すると次のように表示されてしまいます。
 
+![プレビュー1](./column1.png)
+
 Jetpack Composableで縦に並べるには、次のように `Column` を使います。
 
 ```kotlin
@@ -25,3 +27,6 @@ fun Greeting(name: String) {
 ```
 
 プレビューは次のようになります。
+
+![プレビュー2](./column2.png)
+
