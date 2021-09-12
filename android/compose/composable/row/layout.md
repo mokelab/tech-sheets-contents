@@ -4,7 +4,7 @@ Jetpack ComposeでComposableを横に並べるには `Row` を使います。
 
 ```kotlin
 @Composable
-fun Greeting2(name: String) {
+fun Greeting(name: String) {
     Row {
         Text(text = "こんばんは $name！")
         Button(onClick = {
