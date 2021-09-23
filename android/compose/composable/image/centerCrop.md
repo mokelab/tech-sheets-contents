@@ -18,4 +18,4 @@ fun Greeting(name: String) {
 
 プレビューは次のようになります。幅のほうが広いので幅いっぱいに拡大し、中央で切り取られています。
 
-![プレビュー](./centerCrop.png)
+![プレビュー](./centerCrop1.png)
