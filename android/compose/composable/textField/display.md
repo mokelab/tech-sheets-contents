@@ -27,5 +27,5 @@ import androidx.compose.runtime.*
 
 プレビューは次のようになります。今回はプレビュー部分をエミュレーターで実行しています。
 
-![プレビュー](./display1.html)
+![プレビュー](./display1.png)
 
