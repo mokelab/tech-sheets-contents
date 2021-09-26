@@ -26,7 +26,7 @@ fun Greeting() {
 `visualTransformation` には `PasswordVisualTransformation()` を指定します。この指定を忘れると入力してもらったパスワードがそのまま見えてしまいます。
 
 `keyboardOptions` には `KeyboardOptions` を指定します。 `keyboardType` に `KeyboardType.Password` を指定し、 `imeAction` も適切なものを指定します。
-`imeAction` の指定を省略すると、パスワードの文字として改行コードが指定可能になってしまいます。
+`imeAction` の指定を省略すると、パスワードの文字として改行コードが入力可能になってしまいます。
 
 プレビューは次のようになります。
 
