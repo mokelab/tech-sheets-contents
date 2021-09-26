@@ -1,6 +1,7 @@
 Title: TextFieldでパスワード入力欄を表示する
 
 Jetpack Composeでパスワード入力欄を表示するには、 `TextField` の `visualTransformation` と `keyboardOptions` パラメータに値を指定します。
+Viewシステムの `EditText` では `android:inputType="textPasssord"` を指定して実現していました。
 
 ```kotlin
 @Composable
