@@ -6,3 +6,4 @@ Jetpack Composeを使うアプリを作るには、Android Stuido Arctic Fox以�
 
 - [標準のComposable関数](./composable/index.html)
 - [Modifier](./modifier/index.html)
+- [アプリのベースとなるComposable](./app/index.html)
