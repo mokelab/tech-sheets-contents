@@ -7,3 +7,4 @@ Compose Modifier(修飾子)とは、Composableを装飾したり拡張したり�
 - [幅を指定する](./width.html)
 - [高さを指定する](./height.html)
 - [背景色を指定する](./background1.html)
+- [角丸の背景色を指定する](./background2.html)
