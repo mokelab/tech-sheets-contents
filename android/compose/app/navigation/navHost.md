@@ -45,4 +45,4 @@ fun MyApp() {
 
 `NavHost` の `startDestination` で、最初にどの画面(Composable)が表示されるかを指定します。
 
-`NavHost` の `{}` の中で、 `composable("main")` を画面の数だけ作り、その中でどのComposableを表示させるかを指定します。
+`NavHost` の `{}` の中で、 `composable(画面名)` を画面の数だけ作り、その中でどのComposableを表示させるかを指定します。
