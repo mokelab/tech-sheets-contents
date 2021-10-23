@@ -10,3 +10,4 @@ Title: Navigation Compose
 ```
 
 - [アプリにNavHostを追加する](./navHost.html)
+- [画面遷移させる](./navigate.html)
