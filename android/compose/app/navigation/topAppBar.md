@@ -27,5 +27,40 @@ fun MyApp() {
 }
 ```
 
+## Navigation Iconを設定する
 
+状態として取得した `navBackStackEntry` をもとに、 `TopAppBar` の `Navigation Icon` を設定します。 
+
+```kotlin
+@Composable
+fun MyTopAppBar(
+    navController: NavController,
+    navBackStackEntry: NavBackStackEntry?
+) {
+    val navigationIcon: (@Composable () -> Unit)? =
+            if (navBackStackEntry?.destination?.route != "main") {
+                {
+                    IconButton(onClick = {
+                        navController.popBackStack()
+                    }) {
+                        Icon(
+                            imageVector = Icons.Outlined.ArrowBack,
+                            contentDescription = "Back"
+                        )
+                    }
+                }
+            } else {
+                null
+            }
+    TopAppBar(
+        title = {
+            Text(text = stringResource(id = R.string.app_name))
+        },
+        navigationIcon = navigationIcon,
+    )
+}
+```
+
+戻るボタンが必要ない場合、 `TopAppBar` の `navigationIcon` パラメータに `null` を指定する必要があるため、
+ややこしいコードになっています。今、どの画面にいるかは `navBackStackEntry.destination.route` に入っています。
 
