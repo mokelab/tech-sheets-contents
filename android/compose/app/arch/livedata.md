@@ -1,5 +1,7 @@
 Title: Jetpack ComposeでLiveDataを状態として扱う
 
+Priority: 10
+
 LiveDataは監視可能なデータのいれものです。Jetpack ComposeではこのLiveDataを状態として扱うことができます。
 最新のデータが取得できた際、UIの必要な部分を再composeしてくれます。
 
