@@ -8,3 +8,4 @@ Priority: 30
 なお、アプリにViewModelを追加する方法は[こちら](../navigation/viewModel.html)を参照してください。
 
 - [LiveDataを状態として扱う](./livedata.html)
+- [Flowを状態として扱う](./flow.html)
