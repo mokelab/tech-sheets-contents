@@ -66,8 +66,82 @@ AndroidManifest.xmlにも登録します。
 </manifest>
 ```
 
+## コンストラクタを修正する
 
+今回はToDoを扱う `ToDoRepository` を用意し、必要とする場面では `ToDoRepositoryImpl` が使われるようにしてみます。
 
+```kotlin
+interface ToDoRepository {
+   ...
+}
+
+// @Inject constructorにする
+class ToDoRepositoryImpl @Inject constructor(): ToDoRepository {
+}
+```
+
+コンストラクタに `@Inject constructor()` をつけます。これがないとHiltはインスタンスを作ってくれません。
+
+## モジュールを作る
+
+Hiltでは、「このインターフェースのオブジェクトがほしいと言われたら、このインスタンスを渡してね」という対応を作ってあげる必要があります。
+
+インターフェースと実装クラスを繋げるには、 `@Binds` を使います。リポジトリオブジェクトは一つでいいので `@Singleton` もつけます。
+
+```kotlin
+@Module
+@InstallIn(SingletonComponent::class)
+abstract class MainModule {
+    @Binds
+    @Singleton
+    abstract fun bindToDoRepository(impl: ToDoRepositoryImpl): ToDoRepository
+}
+```
+
+すごく不思議なメソッド定義ですが、「そういうもの」として定義してください。
+
+## アクティビティの修正
+
+アクティビティには `@AndroidEntryPoint` をつけます。
+
+```kotlin
+@AndroidEntryPoint
+class MainActivity : ComponentActivity() {
+    ...
+}
+```
+
+## ViewModelの修正
+
+ゴールはViewModelに必要なオブジェクトをDIすることなので、ViewModelも修正します。 `@HiltViewModel` をつけ、
+コンストラクタは `@Inject constructor()` にします。そして必要となるオブジェクトをコンストラクタの引数として受け取ります。
+
+```kotlin
+@HiltViewModel
+class MainViewModel @Inject constructor(
+    private val repo: ToDoRepository
+): ViewModel() {
+    ...
+}
+```
+
+## NavHostの修正
+
+ようやくJetpack Compose特有の話題がでてきました。ViewModelオブジェクトを取得しているNavHostの部分を修正します。
+
+```kotlin
+NavHost(navController = navController, startDestination = "main") {
+    composable("main") {
+        // hiltViewModel() を使う
+        val viewModel: MainViewModel = hiltViewModel()
+        MainScreen(viewModel) {
+            navController.navigate("second")
+        }
+    }
+}
+```
+　
+これで、ViewModelが必要とするオブジェクトをHiltが注入した上でViewModelオブジェクトを作ってくれるようになります。
 
 
 
