@@ -1,4 +1,5 @@
 Title: Jetpack Composeで読み込み中のぐるぐるを表示する
+Priority: 10
 
 Jetpack Composeで読み込み中を表すぐるぐるを表示するには、 `CircularProgressIndicator()` を使います。
 
