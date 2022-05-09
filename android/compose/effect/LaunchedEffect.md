@@ -1,4 +1,4 @@
-Title: Comppsableが表示されたタイミングでコルーチンを起動する(LaunchedEffect)
+Title: Composableが表示されたタイミングでコルーチンを起動する(LaunchedEffect)
 
 Composableは関数なので、次のように表示のタイミングで処理（副作用）を書きたくなります。
 
