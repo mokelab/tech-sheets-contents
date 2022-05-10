@@ -126,3 +126,7 @@ fun Good(
 ```
 
 実行し、3秒の間にボタンを連打してみます。
+
+![実行結果](./rememberUpdatedState.png)
+
+ `Bad` のほうは最初にComposeされた時の `done()` を呼んでいるため、 `doneValue` は0になりました。 一方 `Good` のほうは最後にComposeされたときの `done()` が呼ばれ、 `doneValue` は9になりました。
