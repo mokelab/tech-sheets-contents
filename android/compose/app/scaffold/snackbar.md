@@ -41,3 +41,4 @@ Button(onClick = {
 
 実行結果はこんな感じです。
 
+![Snackbarの表示](./snackbar.png)
