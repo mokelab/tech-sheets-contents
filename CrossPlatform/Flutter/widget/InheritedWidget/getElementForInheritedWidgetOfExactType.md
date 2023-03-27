@@ -42,6 +42,17 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
+## main()で差し込む
+
+ `runApp()` の引数に `AppModule()` を渡すようにします。差し込みたいオブジェクトはここで作ってしまいましょう。
+
+```
+void main() {
+  runApp(
+      AppModule(userRepository: DefaultUserRepository(), child: const MyApp()));
+}
+```
+
 ## of()を作る
 
 `AppModule` に `of()` を追加して使いやすくします。
@@ -73,3 +84,4 @@ class _MyHomePageState extends State<MyHomePage> {
   ...
 }
 ```
+
