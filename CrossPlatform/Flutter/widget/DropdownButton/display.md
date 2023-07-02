@@ -55,3 +55,5 @@ class _MyHomePageState extends State<MyHomePage> {
 
 要素をタップすると選択肢が表示されます。
 
+![ドロップダウン表示例](./dropdown.png)
+
