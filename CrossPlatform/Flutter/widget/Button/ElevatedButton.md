@@ -1,16 +1,18 @@
-Title: FlutterのElevatedButton
+Title: Flutter の Text
 
 Priority: 10
 
-ElevatedButtonは高さが設定されているボタンです。大事なアクションを決定させるときなどに使用しましょう。
+Text は、単一のスタイルで文字列を表示します。テキストを表示するときに使用しましょう。
 
-![ボタン](./elevatedButton.png)
+[公式ドキュメント](https://api.flutter.dev/flutter/widgets/Text-class.html)
 
-```
-ElevatedButton(       
-  child: const Text("Submit"),
-  onPressed: () {
-    print("OK");
-  },
+```Flutter
+
+Text(
+  'Hello, $_name ',
+  style: const TextStyle(fontWeight: FontWeight.bold),
 )
+
 ```
+
+テキストのスタイルは TextStyle()内に記述します。
