@@ -6,7 +6,7 @@ Text は、単一のスタイルで文字列を表示します。テキストを
 
 [公式ドキュメント](https://api.flutter.dev/flutter/widgets/Text-class.html)
 
-```Flutter
+```
 
 Text(
   'Hello, $_name ',
