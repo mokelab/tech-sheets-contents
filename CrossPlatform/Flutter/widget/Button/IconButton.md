@@ -1,6 +1,6 @@
 Title: Flutter の IconButton
 
-マテリアルデザインのアイコンをボタン化します。
+Flutter の IconButton を使うと、アイコンをボタン化できます。
 
 ボタンが押されたら、onPressed 関数が呼び出されます。null の場合、ボタンは無効になり、タッチに反応しなくなります。
 
