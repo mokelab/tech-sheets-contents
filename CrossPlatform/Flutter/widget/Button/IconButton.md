@@ -1,4 +1,4 @@
-Title: Flutter の IconButton
+eTitle: Flutter の IconButton
 
 Priority: 30
 
@@ -8,7 +8,7 @@ Flutter の IconButton を使うと、アイコンをボタン化できます。
 
 [公式ドキュメント：IconButton class](https://api.flutter.dev/flutter/material/IconButton-class.html)
 
-![iconButton](iconButton_01.jpg)
+![IconButton](iconButton_01.jpg)
 
 ```
 IconButton(
