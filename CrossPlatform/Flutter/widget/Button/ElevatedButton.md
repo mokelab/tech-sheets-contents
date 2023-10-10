@@ -1,6 +1,6 @@
 Title: Flutter の ElevatedButton
 
-Priority: 10
+w
 
 ElevatedButton は高さが設定されているボタンです。大事なアクションを決定させるときなどに使用しましょう。
 
