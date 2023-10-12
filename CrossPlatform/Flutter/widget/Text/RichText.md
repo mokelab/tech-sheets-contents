@@ -9,8 +9,6 @@ Flutter の RichText を使うと、テキストの一部だけ色やサイズ�
 ![RichText](RichText_01.jpg)
 
 ```
-mainAxisAlignment: MainAxisAlignment.center,
-children: <Widget>[
 RichText(
     text: const TextSpan(
     text: "こんにちは、 ",
