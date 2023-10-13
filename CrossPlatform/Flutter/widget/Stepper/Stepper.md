@@ -1,8 +1,8 @@
-Title: Flutter の Stepper
+Title: FlutterのStepperを使ってみる
 
 [公式ドキュメント：Stepper class](https://api.flutter.dev/flutter/material/Stepper-class.html)
 
-Stepper class は、一連のステップの進行状況を表示するためのウィジェットです。
+ `Stepper` は、一連のステップの進行状況を表示するためのウィジェットです。
 フォームの各ステップを表すために使用したり、ユーザーがタスクを完了するために必要な手順を示すために使用したりできます。
 
 ![Stepper](Stepper_01.jpg)
@@ -13,46 +13,49 @@ Stepper class は、一連のステップの進行状況を表示するための
 int _currentStep = 0;
 
 final List<Step> _steps = const [
-    Step(
+  Step(
     title: Text('Step 1'),
     content: Text('"Continue"をタップで次のステップへ'),
-    ),
-    Step(
+  ),
+  Step(
     title: Text('Step 2'),
     content: Text('"Cancel"をタップで前のステップへ'),
-    ),
-    Step(
+  ),
+  Step(
     title: Text('Step 3'),
     content: Text('ステップ名をタップすることで、そのステップへ'),
-    ),
+  ),
 ];
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
+  return Scaffold(
     body: Stepper(
-        currentStep: _currentStep,
-        onStepContinue: () {
+      currentStep: _currentStep,
+      // 次のステップへ
+      onStepContinue: () {
         setState(() {
-            if (_currentStep < _steps.length - 1) {
+          if (_currentStep < _steps.length - 1) {
             _currentStep++;
-            }
+          }
         });
-        },
-        onStepCancel: () {
+      },
+　　　　　　　　　　　　// 前のステップへ
+      onStepCancel: () {
         setState(() {
-            if (_currentStep > 0) {
+          if (_currentStep > 0) {
             _currentStep--;
             }
         });
-        },
-        onStepTapped: (int index) {
+      },
+      // ステップ自体をタップ
+      onStepTapped: (int index) {
         setState(() {
-            _currentStep = index;
+          _currentStep = index;
         });
-        },
-        steps: _steps,
+      },
+      steps: _steps,
     ),
-    );
+  );
 }
 ```
