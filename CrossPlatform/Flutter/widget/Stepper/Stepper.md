@@ -1,5 +1,7 @@
 Title: FlutterのStepperを使ってみる
 
+Priorty: 10
+
 [公式ドキュメント：Stepper class](https://api.flutter.dev/flutter/material/Stepper-class.html)
 
  `Stepper` は、一連のステップの進行状況を表示するためのウィジェットです。
