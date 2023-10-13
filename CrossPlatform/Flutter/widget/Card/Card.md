@@ -1,4 +1,6 @@
-Title: Flutter の Card class
+Title: FlutterのCardを使ってみる
+
+Priority: 10
 
 [公式ドキュメント：Card class](https://api.flutter.dev/flutter/material/Card-class.html)
 
