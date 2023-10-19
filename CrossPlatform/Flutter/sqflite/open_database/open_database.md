@@ -8,15 +8,16 @@ import 'package:sqflite/sqflite.dart';
 Database? db;
 
 void main() async {
-  db = await openDatabase("my_db.db", version: 1,
-      onCreate: (database, version) async {
-    await database.execute('''create table account(
+  db = await openDatabase(
+    "my_db.db",
+    version: 1,
+    onCreate: (database, version) async {
+      await database.execute('''create table account(
           _id integer primary key autoincrement,
           name text,
-          age int
-          )''');
-  });
-  runApp(MyApp());
+          age int)''');
+    },
+  );
 }
 ```
 
