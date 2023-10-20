@@ -5,7 +5,7 @@ Title: Flutter の sqflite でデータを追加する
 こちらも Android の `SQLiteDatabase` とほぼ同じだったりします。
 
 ```
-Future _insertAccount(
+Future<void> _insertAccount(
   Database db,
   String name,
   int age,
