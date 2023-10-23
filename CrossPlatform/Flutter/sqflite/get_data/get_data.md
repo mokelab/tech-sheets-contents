@@ -10,7 +10,7 @@ Future<List<Account>> _getAllAccount(
 ) async {
   List<Map<String, dynamic>> results = await db.query("account");
   // map to account list
-  return results.map((Map m) {
+  return results.map((Map<String, dynamic> m) {
     int id = m["_id"];
     String name = m["name"];
     int age = m["age"];
