@@ -8,7 +8,7 @@ Title: Flutter の sqflite でデータを取得する
 Future<List<Account>> _getAllAccount(
   Database db,
 ) async {
-  List<Map> results = await db.query("account");
+  List<Map<String, dynamic>> results = await db.query("account");
   // map to account list
   return results.map((Map m) {
     int id = m["_id"];
@@ -34,7 +34,7 @@ Future<List<Account>> _getAllAccount(
 例えば「`\_id=1` のデータだけ取得したい」といった場合は、 `where` と `whereArgs` を指定します。
 
 ```
-List<Map> results = await db!.query(
+List<Map<String, dynamic>> results = await db!.query(
   "account",
   where: "_id=?",
   whereArgs: [1],
