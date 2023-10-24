@@ -9,7 +9,7 @@ Future<void> _updateAccount(
   String name,
   int age,
 ) async {
-  var values = <String, dynamic>{
+  final values = <String, dynamic>{
     "name": name,
     "age": age,
   };
