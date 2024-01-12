@@ -14,7 +14,7 @@ Flowは非同期でデータが流れてくるモノです。Jetpack Composeで�
 ```kotlin
 class MainViewModel: ViewModel() {
     private val _counter = MutableStateFlow(0)
-    val counter: StateFlow<Int> = _counter
+    val counter: StateFlow<Int> = _counter.asStateFlow()
 
     fun add() {
         _counter.value = _counter.value + 1
