@@ -58,3 +58,56 @@ fun MainScreen() {
 表示は次のようになります。
 
 ![2行テキスト](./listItem2.png)
+
+## 先頭にチェックボックス
+
+まとめて削除の機能を実装したりする際に使うとよさそうです。
+
+```
+data class Item(
+  val id: Int,
+  val name: String,
+)
+
+val mokeras = (1..100).map {
+  Item(
+    id = it,
+    name = "モケラ $it 号",
+  )
+}
+
+@Composable
+fun MainScreen() {
+  var checkedIdSet by remember {
+    mutableStateOf(emptySet<Int>())
+  }
+  LazyColumn {
+    items(mokeras) { mokera ->
+      ListItem(
+        headlineContent = {
+          Text(mokera.name)
+        },
+        leadingContent = {
+          Checkbox(
+            checked = checkedIdSet.contains(mokera.id),
+            onCheckedChange = { checked ->
+              checkedIdSet = if (checked) {
+                checkedIdSet + mokera.id
+              } else {
+                checkedIdSet - mokera.id
+              }
+            }
+          )
+        }
+      )
+    }
+  }
+}
+```
+
+表示は次のようになります。
+
+![先頭にチェックボックス](./listItem3.png)
+
+
+
