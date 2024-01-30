@@ -109,5 +109,36 @@ fun MainScreen() {
 
 ![先頭にチェックボックス](./listItem3.png)
 
+## 末尾にアイコン
 
+ `trailingContent` で指定します。
+
+```
+val names = (1..100).map { "モケラ $it 号" }
+
+@Composable
+fun MainScreen() {
+  LazyColumn {
+    items(names) { name ->
+      ListItem(
+        headlineContent = {
+          Text(name)
+        },
+        trailingContent = {
+          IconButton(onClick = { /*TODO*/ }) {
+             Icon(
+               imageVector = Icons.Default.Info,
+                 contentDescription = ""
+               )
+            }
+        }
+      )
+    }
+  }
+}
+```
+
+表示は次のようになります。
+
+![末尾にアイコン](./listItem4.png)
 
