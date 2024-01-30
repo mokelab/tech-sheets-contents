@@ -30,3 +30,31 @@ fun MainScreen() {
 表示は次のようになります。
 
 ![テキストのみ](./listItem1.png)
+
+## テキスト2行
+
+ `supportingContent` を使います。
+
+```
+val names = (1..100).map { "モケラ $it 号" }
+
+@Composable
+fun MainScreen() {
+  LazyColumn {
+    itemsIndexed(names) { index, name ->
+      ListItem(
+        headlineContent = {
+          Text(name)
+        },
+        supportingContent = {
+          Text("$index 番目")
+        }
+      )
+    }
+  }
+}
+```
+
+表示は次のようになります。
+
+![2行テキスト](./listItem2.png)
