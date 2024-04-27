@@ -54,3 +54,30 @@ if (pullToRefreshState.isRefreshing) {
 }
 ```
 
+## 完成形
+
+```
+@Composable
+fun MainScreen(viewModel: MainViewModel) {
+  val pullToRefreshState = rememberPullToRefreshState()
+
+  Scaffold(
+    modifier = Modifier.nestedScroll(pullToRefreshState.nestedScrollConnection),
+  ) { innerPadding ->
+    Box(modifier = Modifier.padding(innerPadding)) {
+      LazyColumn(modifier = Modifier.fillMaxSize()) { ... }
+
+      PullToRefreshContainer(
+        state = pullToRefreshState,
+        modifier = Modifier.align(Alignment.TopCenter),
+      )
+    }
+  }
+
+  if (pullToRefreshState.isRefreshing) {
+    LaunchedEffect(Unit) {
+      viewModel.refresh()
+    }
+  }
+}
+```
