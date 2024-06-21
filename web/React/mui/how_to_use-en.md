@@ -12,7 +12,7 @@ Please see below.
 
 If you already have a project with MUI, you can skip this step.  
 
-Import and use the component
+# Import and use the component
 
 Below is an example of using the Button component.  
 
