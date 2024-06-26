@@ -23,4 +23,5 @@ export function ButtonComponent() {
 }
 ```
 
-![image](https://github.com/mokelab/tech-sheets-contents/assets/37394133/450b1a41-bdcc-494d-935f-106661804cbb)
+`![image](https://github.com/mokelab/tech-sheets-contents/assets/37394133/450b1a41-bdcc-494d-935f-106661804cbb)`
+![Button](./button.png)
