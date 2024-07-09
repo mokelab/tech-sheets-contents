@@ -2,7 +2,7 @@ Title: MUI の Button Group コンポーネント
 
 Priority: 10
 
-MUI　の Button Groupコンポーネントは、複数のボタンを一つのグループとしてまとめることができます。見た目を統一するのに役立ちます。  
+MUI の Button Groupコンポーネントは、複数のボタンを一つのグループとしてまとめることができます。見た目を統一するのに役立ちます。  
 
 公式ドキュメント：[Button Group](https://mui.com/material-ui/react-button-group/)
 
