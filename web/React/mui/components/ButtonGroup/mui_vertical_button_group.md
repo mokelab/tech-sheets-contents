@@ -1,6 +1,6 @@
 Title: MUI の Button Group を縦に表示する
 
-Priority: 10  
+Priority: 20  
 
 Button Groupコンポーネントは、`orientation` プロパティを `vertical` に指定することで、Buttonコンポーネントを縦に並べることができます。  
 
