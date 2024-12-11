@@ -75,4 +75,5 @@ VITE v6.0.3  ready in 379 ms
 
 `localhost:5173` にブラウザでアクセスすると次のような画面が表示されます。
 
+![vite+react画面](./vite_react.png)
 
