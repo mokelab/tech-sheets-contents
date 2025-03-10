@@ -57,11 +57,11 @@ color props を使って色を変更できます。
 
 ![success color](./color_success.png)
 
-'''tsx
+```tsx
 <Button variant="text" color="success">Button</Button>
 <Button variant="outlined" color="success">Button</Button>
 <Button variant="contained" color="success">Button</Button>
-'''
+```
 
 ## error
 
