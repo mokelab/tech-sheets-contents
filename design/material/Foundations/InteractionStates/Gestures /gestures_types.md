@@ -1,5 +1,5 @@
 Title:ジェスチャーの種類  
-Priority: 10  
+Priority: 20  
 
 
 ## ジェスチャーの種類  
