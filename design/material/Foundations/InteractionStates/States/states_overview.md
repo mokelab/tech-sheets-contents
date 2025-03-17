@@ -1,4 +1,4 @@
-Title:ステート（States）  
+Title:ステート（States）の概要  
 Priority: 10
 
 ## ステート（States） （状態）
