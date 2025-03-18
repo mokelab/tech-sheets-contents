@@ -1,4 +1,4 @@
 Title:フォーカス（Focused）  
-Priority: 60
+Priority: 70
 
 ## フォーカス（Focused）
