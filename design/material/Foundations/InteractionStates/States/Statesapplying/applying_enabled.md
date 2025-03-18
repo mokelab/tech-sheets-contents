@@ -1,5 +1,5 @@
 Title:有効（Enabled）  
-Priority: 30
+Priority: 40
 
 
 ## 有効（Enabled）  
