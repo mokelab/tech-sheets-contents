@@ -1,4 +1,4 @@
 Title:押下（Pressed）  
-Priority: 70
+Priority: 80
 
 ## 押下（Pressed）
