@@ -1,4 +1,4 @@
 Title:ドラッグ（Dragged）  
-Priority: 80
+Priority: 90
 
 ## ドラッグ（Dragged）
