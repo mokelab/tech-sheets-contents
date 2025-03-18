@@ -1,4 +1,4 @@
 Title:ホバー（Hover）  
-Priority: 50
+Priority: 60
 
 ## ホバー（Hover）
