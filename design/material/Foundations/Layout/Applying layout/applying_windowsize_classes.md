@@ -1,3 +1,3 @@
-Title: Foundation
+Title: Window size classes
 
-Priority: 10
+Priority: 20
