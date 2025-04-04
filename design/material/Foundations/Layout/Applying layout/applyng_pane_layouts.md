@@ -1,3 +1,3 @@
-Title:Pane layouts  
+Title: Pane layouts  
 
 Priority: 10
